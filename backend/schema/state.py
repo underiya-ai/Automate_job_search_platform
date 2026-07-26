@@ -12,6 +12,7 @@ class JobSearchState(BaseModel):
     job_clean_text: str = ""
     resume_clean_text: str = ""
     extracted_keywords: list[str] = Field(default_factory=list)
+    search_queries: list[str] = Field(default_factory=list)
     location: str = ""
     platform: list[str] = Field(default_factory=list)
     results: list[dict] = Field(default_factory=list)
