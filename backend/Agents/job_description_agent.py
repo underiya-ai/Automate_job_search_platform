@@ -5,7 +5,7 @@ from backend.prompts.job_description_agent_prompt import (
 )
 
 
-def job_description_agent(state: JobSearchState) -> dict:
+def job_description_node(state: JobSearchState) -> dict:
 
     if not state.job_text.strip():
         return {
@@ -21,3 +21,4 @@ def job_description_agent(state: JobSearchState) -> dict:
     return {
         "job_clean_text": response.content.strip()
     }
+

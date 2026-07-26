@@ -42,7 +42,7 @@ STOPWORDS = {
 }
 
 
-def keyword_extractor(state: JobSearchState) -> dict:
+def keyword_extractor_node(state: JobSearchState) -> dict:
     """
     Extract keywords from Resume or Job Description.
     """

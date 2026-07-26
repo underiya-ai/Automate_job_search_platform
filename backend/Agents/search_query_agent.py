@@ -5,7 +5,7 @@ from backend.prompts.search_query_prompt import SEARCH_QUERY_PROMPT
 from backend.schema.state import JobSearchState
 
 
-def search_query_agent(state: JobSearchState):
+def search_query_node(state: JobSearchState):
 
     if not state.extracted_keywords:
         return {
