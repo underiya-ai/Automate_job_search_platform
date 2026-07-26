@@ -1,0 +1,3 @@
+uvicorn 
+langgraph
+python-dotenv
