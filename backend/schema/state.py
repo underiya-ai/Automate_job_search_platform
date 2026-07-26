@@ -38,7 +38,8 @@ class Job(BaseModel):
 
 
 class JobSearchState(BaseModel):
-    mode: str = ""                              
+    mode: str = ""  
+    resume_path: str = ""                            
     job_text: str = ""
     resume_text: str = ""
     job_clean_text: str = ""

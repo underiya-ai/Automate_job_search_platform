@@ -1,5 +1,5 @@
 from fastapi import HTTPException
-from backend.service.resume_service import FileService
+from backend.service.resume_analysis_service import FileService
 from backend.service.text_cleaner import TextCleaner
 from backend.Agents.resume_agent import ResumeAnalyzer
 
