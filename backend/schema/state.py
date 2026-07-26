@@ -3,7 +3,7 @@ from typing import List
 
 
 
-from pydantic import BaseModel, Field
+
 
 class JobSearchState(BaseModel):
     mode: str = ""                              
@@ -16,7 +16,7 @@ class JobSearchState(BaseModel):
     platform: list[str] = Field(default_factory=list)
     results: list[dict] = Field(default_factory=list)
 
-    
+
 
 
 
