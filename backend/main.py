@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from backend.api.resume_api import router as resume_api
+from backend.api.job_by_jobdescription_api import router as job_description_router
+from backend.api.resume_parser_api import router as resume_parser_router
+
 
 
 app = FastAPI(
@@ -9,6 +12,8 @@ app = FastAPI(
 )
 
 app.include_router(resume_api)
+app.include_router(resume_parser_router)
+app.include_router(job_description_router)
 
 @app.get("/")
 async def root():
