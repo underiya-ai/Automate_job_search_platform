@@ -26,7 +26,7 @@ async def search_job_by_resume(
     try:
         state = JobSearchState(
             mode="resume",
-            resume_path=file_path
+            resume_path=str(file_path)
         )
 
         result = await job_search_graph.ainvoke(state)
