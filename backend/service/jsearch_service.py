@@ -4,7 +4,7 @@ from backend.utils.config import RAPIDAPI_API_KEY
 from backend.schema.state import Job
 
 
-BASE_URL = "https://jsearch.p.rapidapi.com/search"
+BASE_URL = "https://jsearch.p.rapidapi.com/search-v2"
 
 
 HEADERS = {
@@ -13,15 +13,15 @@ HEADERS = {
 }
 
 
-def search_jobs(query: str,location: str = "",page: int = 1,num_pages: int = 1) -> list[Job]:
+def search_jobs(query: str,location: str = "",num_pages: int = 1) -> list[Job]:
     """
     Search jobs using JSearch API Returns:list[Job]
     """
 
     params = {
         "query": query,
-        "page": page,
         "num_pages": num_pages,
+        "country": "in"
     }
 
     if location:
@@ -35,6 +35,13 @@ def search_jobs(query: str,location: str = "",page: int = 1,num_pages: int = 1) 
             params=params,
             timeout=30,
         )
+        # DEBUG
+        print("=" * 50)
+        print("Status Code:", response.status_code)
+        print("URL:", response.url)
+        print("Response:")
+        print(response.text)
+        print("=" * 50)
 
         response.raise_for_status()
 
