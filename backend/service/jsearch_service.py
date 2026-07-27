@@ -36,16 +36,13 @@ def search_jobs(query: str,location: str = "",num_pages: int = 1) -> list[Job]:
             timeout=30,
         )
         # DEBUG
-        print("=" * 50)
-        print("Status Code:", response.status_code)
-        print("URL:", response.url)
-        print("Response:")
-        print(response.text)
-        print("=" * 50)
+       
 
         response.raise_for_status()
 
         data = response.json()
+
+        
 
     except requests.RequestException as e:
 
@@ -55,7 +52,18 @@ def search_jobs(query: str,location: str = "",num_pages: int = 1) -> list[Job]:
 
     jobs = []
 
-    for item in data.get("data", []):
+    items = data.get("data", {}).get("jobs", [])
+
+    
+
+    if not isinstance(items,list):
+        print("Unexpected response:", items)
+
+        return []
+
+    for item in items:
+
+        
 
         highlights = item.get("job_highlights", {})
 
