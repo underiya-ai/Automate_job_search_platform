@@ -319,37 +319,20 @@ box-shadow:0 0 20px 10px rgba(134,198,188,.86);
 
 }
 
-
-
-.last-button{
-
+.footer{
+  height: 50px;
+  width: 100%;
+  background-color: rgb(24, 46, 46);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     
-
-display: flex;
-margin-left: 20px;
-flex-wrap:wrap;
-margin-top:40px;
-
-column-gap: 80px;
-padding-left: 20px;
-
 }
 
-.last-button button{
-
-padding:14px 28px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-background-color: cadetblue;
-color: azure;
-font-size: 14px;
-
-transition:all .35s ease;
+.footer p{
+  color: azure;
 }
 
-.last-button button:hover{
-
-  transform:translateY(-6px) scale(1.05);
-  box-shadow:0 0 20px rgba(134,198,188,.8);
-}

@@ -3,7 +3,7 @@ import React from 'react'
 const Lastbutton = () => {
   return (
     <div>
-        <div className="last-button">
+        <div className="footer">
                 <button className='upload'>Upload Resume</button>
                 <button className='job'>Start Job Search</button>
               </div>
@@ -11,4 +11,4 @@ const Lastbutton = () => {
   )
 }
 
-export default Lastbutton
+export default Lastbutton 
