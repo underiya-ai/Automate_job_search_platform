@@ -336,3 +336,123 @@ box-shadow:0 0 20px 10px rgba(134,198,188,.86);
   color: azure;
 }
 
+
+/* Resume analuzer page ka css */
+
+
+.resume-container{
+  width: 100%;
+  height: 100vh;
+  
+
+}
+
+.resume-header{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+}
+.resume-header h1{
+  color: azure;
+}
+
+.resume-upload{
+  width: 100%;
+ 
+
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.upload-file{
+background-color: cadetblue;
+min-width: 400px;
+height: 300px;
+margin-top: 40px;
+border-radius: 20px;
+border: 2px rgb(22, 45, 45) dashed ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.job-desc-container{
+ 
+  margin-top: 40px;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.job-desc-container h2{
+  padding: 7px;
+  color: rgb(31, 62, 59);
+}
+
+.job-desc-input{
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  background-color: rgba(107, 126, 119, 0.523);
+  color: rgb(249, 248, 248);
+}
+textarea {
+ color: black;
+}
+::placeholder{
+  color: black;
+  padding: 7px;
+}
+
+.uploadbtn{
+  background-color: darkcyan;
+  padding: 10px 15px;
+  font-size: 18px;
+  margin-top: 50px;
+  border-radius: 16px;
+  box-shadow: 5px 0px 13px 0px black;
+}
+
+.text-container{
+  padding: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  text-align: center;
+  flex-wrap: wrap;
+  
+}
+.text-container h3{
+ color: rgb(23, 45, 45);
+}
+
+.analyze-btn{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+}
+
+
+.analyze-btn button{
+  background-color: darkcyan;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(102, 209, 207);
+
+}
