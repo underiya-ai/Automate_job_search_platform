@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from backend.api.resume_api import router as resume_api
 from backend.api.job_by_jobdescription_api import router as job_description_router
 from backend.api.resume_parser_api import router as resume_parser_router
+from fastapi.middleware.cors import CORSMiddleware
 
 
 
@@ -9,6 +10,15 @@ app = FastAPI(
     title="Automate job search API",
     description="AI Powered platform which help to search the job and also Analysis the Resume",
     version="1.0.0"
+)
+
+# CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(resume_api)

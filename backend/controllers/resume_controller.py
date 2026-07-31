@@ -2,6 +2,7 @@ from fastapi import HTTPException
 from backend.service.resume_analysis_service import FileService
 from backend.service.text_cleaner import TextCleaner
 from backend.Agents.resume_agent import ResumeAnalyzer
+import json
 
 class ResumeController:
  
@@ -24,7 +25,7 @@ class ResumeController:
 
         resume_result = ResumeAnalyzer.analyze(resume_text=clean_resume_text,job_description=clean_job_description)
 
-        return resume_result
+        return json.loads(resume_result)
 
         
 

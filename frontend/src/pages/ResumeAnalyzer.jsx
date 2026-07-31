@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { CloudUpload } from "lucide-react";
 import Lastbutton from "../components/Lastbutton";
 
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "http://127.0.0.1:8000";
 
 function ResumeAnalyzer() {
 
