@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <div>
         <div className="navbar-container">
@@ -14,12 +15,12 @@ const navbar = () => {
                                       ☰
             </div>
             <div className="links">
-              <a href="#">Home</a>
-              <a href="#">Resume Analyzer</a>
-              <a href="#">AI Job Search</a>
-              <a href="#">About</a>
-              <a href="#">Dashbord</a>
-            </div>
+  <Link to="/">Home</Link>
+  <Link to="/resume">Resume Analyzer</Link>
+  <Link to="/job-search">AI Job Search</Link>
+  <Link to="/about">About</Link>
+  <Link to="/dashboard">Dashboard</Link>
+</div>
             <div className="sing-up-container">
               <button className='login'>Login</button>
               <button className='sing'>Sing-up</button>
@@ -29,4 +30,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar;

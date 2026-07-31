@@ -1,33 +1,24 @@
 import React from 'react'
-import Navbar from './components/navbar'
-import Middle from './components/Middle'
-import Lastbutton from './components/Lastbutton'
+import {Routes,Route} from 'react-router-dom'
+import Home from './pages/Home';
+import ResumeAnalyzer from './pages/ResumeAnalyzer';
+import Jobsearch from './pages/Jobsearch';
+import About from './pages/About';
+import Dashbord from './pages/Dashbord';
+
+
 const App = () => {
   return (
-    <div className='container'>
-       <div className="main-container">
+<Routes>
+<Route path='/' element={<Home/>}/>
+<Route path='/resume' element={<ResumeAnalyzer/>}/>
+<Route path='/job-search' element={<Jobsearch/>}/>
+<Route path='/about' element={<About/>}/>
 
-        <div className='nav-container'>
-            <Navbar/>
-        </div>
+<Route path='/dashboard' element={<Dashbord/>}/>
 
-        <div className="middle-container">
-            <Middle/>
-        <div>
-            <div className="last-container">
-                <div className="footer">
-                       <p>
-                        © 2026 AI Job Search Platform | Built by
-                        <strong> Aniket Underiya</strong>
-                    </p>
-                </div>
-            </div>
-         </div>
-        </div>
-       </div>
-
-    </div>
+</Routes>
   )
 }
 
-export default App
+export default App;

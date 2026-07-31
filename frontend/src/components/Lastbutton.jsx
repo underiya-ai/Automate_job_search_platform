@@ -3,10 +3,14 @@ import React from 'react'
 const Lastbutton = () => {
   return (
     <div>
-        <div className="footer">
-                <button className='upload'>Upload Resume</button>
-                <button className='job'>Start Job Search</button>
-              </div>
+        <div>
+                <div className="footer">
+                       <p>
+                        © 2026 AI Job Search Platform | Built by
+                        <strong> Aniket Underiya</strong>
+                    </p>
+                </div>
+            </div>
     </div>
   )
 }
