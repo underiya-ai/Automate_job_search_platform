@@ -34,7 +34,7 @@ function ResumeAnalyzer() {
   async function handleAnalyze() {
 
     if (!file) {
-      setError("Please choose a resume.");
+      setError("Please choose a resume...");
       return;
     }
 
@@ -127,7 +127,7 @@ function ResumeAnalyzer() {
           <div className="upload-file">
 
             <div className="icon">
-            <CloudUpload size={100} />
+            <CloudUpload size={80} color='white' />
             </div>
 
             <div className="text-container">
