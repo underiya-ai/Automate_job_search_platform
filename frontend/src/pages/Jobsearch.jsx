@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react';
 import Navbar from '../components/Navbar';
 import {CloudUpload,FileText,Search,MapPin,}from 'lucide-react';
 import './Jobsearch.css';
+import JobResult from './JobResult';
 
+
+const API_BASE_URL = "http://127.0.0.1:8000";  
 
 const Jobsearch = () => {
 
@@ -36,43 +39,102 @@ function handleFileChange(event) {
 
     }
 
-    async function handleSearch() {
+  async function handleSearch() {
 
-        setError("");
+    setError("");
 
-        if (location.trim() === "") {
+    if (location.trim() === "") {
+        setError("Please enter location.");
+        return;
+    }
 
-            setError("Please enter location.");
+    if (mode === "resume" && !file) {
+        setError("Please upload your resume.");
+        return;
+    }
 
-            return;
+    if (mode === "job_description" && jobDescription.trim() === "") {
+        setError("Please enter Job Description.");
+        return;
+    }
 
-        }
+    setLoading(true);
+
+    try {
+
+        let response;
 
         if (mode === "resume") {
 
-            if (!file) {
+            const formData = new FormData();
 
-                setError("Please upload resume.");
+            formData.append("file", file);
+            formData.append("location", location);
 
-                return;
+            response = await fetch(
+                `${API_BASE_URL}/job-search/search-by-resume`,
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
 
-            }
+        } else {
+
+            response = await fetch(
+                `${API_BASE_URL}/job-search/search-by-job-description`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        job_text: jobDescription,
+                        location: location,
+                    }),
+                }
+            );
 
         }
 
-        if (mode === "job_description") {
-
-            if (jobDescription.trim() === "") {
-
-                setError("Please enter Job Description.");
-
-                return;
-
-            }
-
+        if (!response.ok) {
+            throw new Error("Server Error");
         }
-       console.log("Validation Success");
-      }
+
+        const data = await response.json();
+
+        console.log(data);
+
+        setResult(data);
+
+    }
+
+    catch (error) {
+
+        setError(error.message);
+
+    }
+
+    finally {
+
+        setLoading(false);
+
+    }
+
+}
+
+if (result) {
+
+    return (
+
+        <JobResult
+            jobs={result.results}
+        />
+
+    );
+
+}
+
   return (
     <div className='job-container'>
         <div className='nav-container'>

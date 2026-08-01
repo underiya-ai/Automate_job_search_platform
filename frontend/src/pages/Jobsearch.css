@@ -165,7 +165,7 @@
 
     margin-top:40px;
 
-    background:rgba(220, 228, 228, 0.87);
+    background:rgba(220, 228, 228, 0.87) ;
 
     padding:35px;
 
@@ -267,7 +267,7 @@
 
 .search-btn{
 
-    background:#2563eb;
+    background:#2b9999;
 
     color:white;
 
@@ -289,7 +289,7 @@
 
 .search-btn:hover{
 
-    background:#1d4ed8;
+    background:#34ddbb;
 
     transform:translateY(-3px);
 
