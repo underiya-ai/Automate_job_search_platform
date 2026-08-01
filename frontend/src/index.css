@@ -469,3 +469,140 @@ textarea {
 
 
 }
+
+/* Resume result page ka css */
+
+.dashboard-top{
+
+display:flex;
+justify-content:center;
+gap:40px;
+ margin:40px 0;
+flex-wrap:wrap;
+
+}
+
+.circle-card{
+
+background:white;
+width:220px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.circle{
+
+width:160px;
+height:160px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+
+}
+
+.circle-inner{
+
+width:125px;
+height:125px;
+background:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+}
+
+.circle-inner h2{
+
+font-size:34px;
+color:#2563eb;
+
+}
+
+.circle-card h3{
+
+    margin-top:18px;
+
+    color:#444;
+
+}
+
+.result-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.reset-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.reset-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.summary-card{
+
+    margin-bottom:30px;
+
+}
+
+.result-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.result-middle{
+
+    background:#f5f7fb;
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+.result-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
