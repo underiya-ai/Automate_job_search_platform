@@ -1,5 +1,6 @@
 import React from "react";
 import {CheckCircle,XCircle,Award,AlertTriangle,} from "lucide-react";
+import {Search,Briefcase,GraduationCap,FolderGit2,} from "lucide-react";
 
 const CircularProgress = ({ value, title }) => {
 
@@ -204,7 +205,7 @@ const ResumeResult = ({ data, fileName, onReset }) => {
 
       <AlertTriangle
         size={24}
-        color="#ef4444"
+        color="#c50e0e"
       />
 
       <h3>Missing Skills</h3>
@@ -228,13 +229,13 @@ const ResumeResult = ({ data, fileName, onReset }) => {
 
       <CheckCircle
         size={24}
-        color="#22c55e"
+        color="#09e95b"
       />
 
       <h3>Strengths</h3>
 
     </div>
-
+ 
     <BulletList items={strengths}/>
 
   </div>
