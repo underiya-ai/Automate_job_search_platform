@@ -1,0 +1,308 @@
+.job-container{
+
+    min-height:100vh;
+    background:rgba(41, 70, 70, 0.95);
+
+}
+
+.job-search-wrapper{
+
+    width:90%;
+    max-width:900px;
+
+    margin:50px auto;
+
+}
+
+.job-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.job-header h1{
+
+    font-size:42px;
+
+    color:#f8f9fb;
+
+    margin-bottom:10px;
+
+}
+
+.job-header p{
+
+    color:#d2e1f5;
+
+    font-size:18px;
+
+}
+
+.mode-selector{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+.mode-selector button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgb(255, 255, 255);
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.mode-selector button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.active-mode{
+
+    background:#02342e !important;
+
+    color:white;
+
+}
+
+
+.upload-card{
+
+    margin-top:40px;
+
+    background:rgba(220, 228, 228, 0.87);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.upload-icon{
+
+    color:#0b271f;
+
+    margin-bottom:20px;
+
+}
+
+.upload-card h2{
+
+    margin-bottom:10px;
+
+    color:#115054;
+
+}
+
+.upload-card p{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+}
+
+.choose-btn{
+
+    display:inline-block;
+
+    background:#144449;
+
+    color:white;
+
+    padding:14px 35px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.choose-btn:hover{
+
+    background:#087962;
+
+}
+
+.job-description-card{
+
+    margin-top:40px;
+
+    background:rgba(220, 228, 228, 0.87);
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.job-description-card h2{
+
+    margin-bottom:20px;
+
+    color:#1e293b;
+
+}
+
+.job-textarea{
+
+    width:100%;
+
+    height:220px;
+
+    resize:none;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.job-textarea:focus{
+
+    border-color:#08342d;
+
+}
+
+.location-card{
+
+    margin-top:30px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.location-card h2{
+
+    margin-bottom:18px;
+
+}
+
+.location-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+.location-input input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.search-btn-container{
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+.search-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 45px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.search-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+.error-text{
+
+    color:red;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:600;
+
+}
